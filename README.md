@@ -42,18 +42,19 @@ The project aims to:
 * Airport passenger data: Retrieved from the API and saved as airport.csv.
   
 2. Add public holiday information to the traffic dataset:
-'''# Example snippet
+```# Example snippet
 from pytimekr import pytimekr
 import pandas as pd
 import re # Process holidays
 holidays = pytimekr.holidays(year=2021) + pytimekr.holidays(year=2022)
-holidays = [int(re.sub('-', '', str(holiday))) for holiday in holidays]'''
-3. Add airport passenger statistics to the dataset.
+holidays = [int(re.sub('-', '', str(holiday))) for holiday in holidays
+```
+4. Add airport passenger statistics to the dataset.
 
 ### Analysis and Visualization
 * Use the matplotlib and seaborn libraries for visualizing traffic trends.
 * Example visualizations:
-** Traffic volume trends during holidays vs. non-holidays.
+    Traffic volume trends during holidays vs. non-holidays.
 * Correlation between airport passenger volume and traffic volume.
   
 ### Modeling
@@ -62,5 +63,5 @@ Potential models: Linear Regression, Random Forest, or Neural Networks.
 
 ### Results
 * Key insights:
-** Significant increase in traffic volume during holidays and weekends.
-** Strong correlation between airport passenger volume and traffic volume near the airport.
+    Significant increase in traffic volume during holidays and weekends.
+    Strong correlation between airport passenger volume and traffic volume near the airport.
